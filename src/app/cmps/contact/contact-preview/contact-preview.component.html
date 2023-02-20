@@ -1,1 +1,7 @@
-<p>contact-preview works!</p>
+<article [routerLink]="['/contact', contact._id]" class="contact-preview">
+  <span>{{ contact.name }}</span>
+  <img
+    src="https://robohash.org/{{ contact._id }}?set=set5"
+    [alt]="contact.name"
+  />
+</article>
