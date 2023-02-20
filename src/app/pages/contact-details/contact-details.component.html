@@ -1,1 +1,10 @@
-<p>contact-details works!</p>
+<article class="contact-details">
+  <img
+    src="https://robohash.org/{{ contact._id }}?set=set5"
+    [alt]="contact.name"
+  />
+  <span>Name: {{ contact.name }}</span>
+  <span>Email: {{ contact.email }}</span>
+  <span>Phone: {{ contact.phone }}</span>
+  <a routerLink="/contact">Back</a>
+</article>

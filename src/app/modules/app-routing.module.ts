@@ -8,7 +8,7 @@ import { StatsComponent } from '../pages/stats/stats.component';
 
 const routes: Routes = [
   {
-    path: 'contact/edit/:_id',
+    path: 'contact/edit/:id',
     component: ContactEditComponent,
   },
   {
@@ -16,7 +16,7 @@ const routes: Routes = [
     component: ContactEditComponent,
   },
   {
-    path: 'contact/:_id',
+    path: 'contact/:id',
     component: ContactDetailsComponent,
   },
   {
