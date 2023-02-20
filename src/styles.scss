@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+// Colors
+$clr1: #2e2e48;
+$clr2: #383855;
+$clr3: #fd783c;
+$clr4: #a8a8c7;
+$clr5: #ffffff;
+
+$navHeight: 65px;
+
+//* COLORS
+//background
+$main-bg-color: $clr1;
+$main-color: $clr5;
+// Primary
+$primary-color-1: #014e56;
+$primary-color-2: #f67e7e;
+$primary-color-3: #ffffff;
+// Secondary
+$secondary-color-1: #79c8c7;
+$secondary-color-2: #2c6269;
+$secondary-color-3: #004047;
+$secondary-color-4: $clr3;
+$secondary-color-5: $clr2;
+$secondary-color-6: rgb(37, 22, 109);
+$secondary-color-7: rgb(149, 34, 169);
+
+// //* BORDERS
+// $border-img-1: 2px solid #c4fffe;
+
+//* LAYOUT
+$layoutPadding: 20px;
+
+// LAYOUT BREAKPOINTS
+$break-narrow: 600px;
+$break-normal: 900px;
+$break-wide: 1100px;
+
+$padded-break-narrow: $break-narrow + $layoutPadding * 2;
+$padded-break-normal: $break-normal + $layoutPadding * 2;
+$padded-break-wide: $break-wide + $layoutPadding * 2;

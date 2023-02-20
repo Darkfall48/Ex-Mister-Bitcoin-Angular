@@ -1,1 +1,15 @@
-<p>app-header works!</p>
+<header class="header">
+  <a routerLink="/" class="app-header-logo" title="Check your current Balance"
+    >Mr. ₿itcoin</a
+  >
+  <nav>
+    <a
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Balance</a
+    >
+    <a routerLink="/contact" routerLinkActive="active">Contacts</a>
+    <a routerLink="/stats" routerLinkActive="active">Stats</a>
+  </nav>
+</header>
