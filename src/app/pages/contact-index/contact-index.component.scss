@@ -1,0 +1,17 @@
+@import "src/assets/style/setup/_mixins.scss";
+
+.contact-index {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: fit-content;
+  max-height: 100%;
+  max-width: 100%;
+  &-title {
+    @include h2;
+    padding-top: 18px;
+    // padding-bottom: 18px;
+  }
+  &-link {
+  }
+}

@@ -1,0 +1,18 @@
+@import "src/assets/style/setup/_mixins.scss";
+@import "src/assets/style/setup/_variables.scss";
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  &-title {
+    @include h1-small;
+    text-align: center;
+    color: $primary-color-3;
+  }
+  &-balance {
+    @include h1-small;
+    text-align: center;
+    color: $primary-color-2;
+  }
+}

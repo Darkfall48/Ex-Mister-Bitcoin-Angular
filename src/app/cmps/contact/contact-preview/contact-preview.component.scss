@@ -1,0 +1,43 @@
+@import "src/assets/style/basics/_typography.scss";
+@import "src/assets/style/setup/_variables.scss";
+@import "src/assets/style/setup/_functions.scss";
+@import "src/assets/style/setup/_mixins.scss";
+
+.contacts-list-contact {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+    "img . delete-btn"
+    "img name details-link"
+    "img . edit-link";
+  background-color: $clr4;
+  padding: 8px;
+  border-radius: 18px;
+  width: 100%;
+  & img {
+    grid-area: img;
+    min-height: 128px;
+    min-width: 128px;
+    max-height: 128px;
+    max-width: 128px;
+    border-radius: 50%;
+    border: 1.5px darkgrey solid;
+  }
+  &-name {
+    grid-area: name;
+    @include body-1;
+  }
+  &-details-link {
+    grid-area: details-link;
+    cursor: pointer;
+  }
+  &-edit-link {
+    grid-area: edit-link;
+    cursor: pointer;
+  }
+  &-delete-btn {
+    grid-area: delete-btn;
+    cursor: pointer;
+  }
+}

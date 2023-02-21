@@ -1,5 +1,6 @@
-<ul class="contact-list">
-  <li *ngFor="let contact of contacts">
-    <contact-preview [contact]="contact"></contact-preview>
-  </li>
-</ul>
+<section *ngFor="let contact of contacts" class="contacts-list">
+  <contact-preview
+    [contact]="contact"
+    class="contacts-list-contact"
+  ></contact-preview>
+</section>

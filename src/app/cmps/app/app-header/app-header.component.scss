@@ -1,17 +1,62 @@
-header {
-  height: 80px;
+@import "src/assets/style/setup/_variables.scss";
+@import "src/assets/style/setup/_mixins.scss";
+@import "src/assets/style/setup/_functions.scss";
+
+.app-header {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  background-color: #4caf50;
-  color: whitesmoke;
-  margin-bottom: 30px;
-  font-size: 1.2em;
-
-  h1.logo {
-    flex-grow: 1;
+  gap: 9px;
+  margin-top: 18px;
+  padding: 18px;
+  background-color: $secondary-color-5;
+  border-radius: em(18px);
+  &-logo {
+    @include h3;
+    color: $primary-color-3;
+    &:hover {
+      text-decoration: none;
+    }
   }
-
-  nav {
+  &-rate {
+    @include body-1;
+    color: $primary-color-3;
+  }
+  & h2 {
+    display: none;
+    @include for-normal-layout {
+      display: block;
+      @include body-1;
+      color: $clr3;
+    }
+  }
+  &-exchange {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+    @include body-1;
+    color: $primary-color-3;
+    & h1 {
+      display: none;
+      @include for-normal-layout {
+        display: block;
+        @include h3;
+      }
+    }
+    & img {
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+    }
+  }
+  &-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    @include body-1;
+    color: $primary-color-3;
     a {
       &:not(:last-child) {
         margin-right: 10px;

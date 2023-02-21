@@ -1,8 +1,11 @@
-<header class="header">
+<header class="app-header">
   <a routerLink="/" class="app-header-logo" title="Check your current Balance"
     >Mr. ₿itcoin</a
   >
-  <nav>
+  <h2 class="app-header-rate" title="Current Bitcoin Rate in American Dollar">
+    1$ = {{ "rate" }}₿
+  </h2>
+  <nav class="app-header-nav">
     <a
       routerLink="/"
       routerLinkActive="active"
@@ -12,4 +15,12 @@
     <a routerLink="/contact" routerLinkActive="active">Contacts</a>
     <a routerLink="/stats" routerLinkActive="active">Stats</a>
   </nav>
+  <!-- <div class="app-header-exchange">
+    <h1 v-if="user" title="The best person!">{{ user.name }}</h1>
+    <img
+      :src="`https://robohash.org/set_set5/${user.name}`"
+      :alt="user.name"
+      :title="user.name"
+    />
+  </div> -->
 </header>

@@ -21,23 +21,25 @@ export class ContactDetailsComponent implements OnInit {
 
   contact!: Contact;
   subscription!: Subscription;
+  data!: any;
 
   async ngOnInit() {
-    // this.subscription = this.route.data.subscribe((data) => {
-    //   console.log('data :>> ', data);
-    //   this.contact = data['contact'];
-    // });
-
-    this.subscription = this.route.params.subscribe(async (params) => {
-      try {
-        const contact = await lastValueFrom(
-          this.contactService.getContactById(params['id'])
-        );
-        this.contact = contact;
-      } catch (err) {
-        throw err;
-      }
+    this.subscription = this.route.data.subscribe((data) => {
+      console.log('data :>> ', data);
+      this.contact = data['contact'];
     });
+
+    // this.subscription = this.route.params.subscribe(async (params) => {
+    //   try {
+    //     const contact = await lastValueFrom(
+    //       this.contactService.getContactById(params['id'])
+    //     );
+    //     console.log('contact :>> ', contact);
+    //     this.contact = contact;
+    //   } catch (err) {
+    //     throw err;
+    //   }
+    // });
   }
 
   ngOnDestroy(): void {

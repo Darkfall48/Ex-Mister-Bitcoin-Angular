@@ -1,7 +1,8 @@
-<article [routerLink]="['/contact', contact._id]" class="contact-preview">
-  <span>{{ contact.name }}</span>
+<article [routerLink]="['/contact', contact._id]" class="contacts-list-contact">
   <img
-    src="https://robohash.org/{{ contact._id }}?set=set5"
+    src="https://robohash.org/set_set4/bgset_bg2/{{ contact._id }}"
     [alt]="contact.name"
+    [title]="contact.name"
   />
+  <h1 class="contacts-list-contact-name">{{ contact.name }}</h1>
 </article>

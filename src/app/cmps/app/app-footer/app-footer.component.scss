@@ -1,7 +1,10 @@
+@import "src/styles.scss";
+
 .app-footer {
   display: grid !important;
   text-align: center;
-  background-color: #383855;
+  // background-color: #383855;
+  background-color: $clr1;
   padding-top: 18px;
   padding-bottom: 18px;
   border-radius: em(18px);

@@ -1,4 +1,6 @@
-.app-main {
+@import "src/assets/style/basics/_layout.scss";
+
+.main-content {
   display: grid !important;
   min-height: 75vh;
   max-height: 75vh;

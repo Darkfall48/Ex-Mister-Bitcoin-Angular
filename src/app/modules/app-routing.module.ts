@@ -5,6 +5,7 @@ import { ContactEditComponent } from '../pages/contact-edit/contact-edit.compone
 import { ContactIndexComponent } from '../pages/contact-index/contact-index.component';
 import { HomeComponent } from '../pages/home/home.component';
 import { StatsComponent } from '../pages/stats/stats.component';
+import { ContactResolver } from '../resolvers/contact.resolver';
 
 const routes: Routes = [
   {
@@ -18,6 +19,7 @@ const routes: Routes = [
   {
     path: 'contact/:id',
     component: ContactDetailsComponent,
+    resolve: { contact: ContactResolver },
   },
   {
     path: 'contact',

@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import "src/assets/style/setup/_variables.scss";
+@import "src/assets/style/basics/_typography.scss";
+@import "src/assets/style/setup/_mixins.scss";
+@import "src/assets/style/basics/_base.scss";
+
 * {
   box-sizing: border-box;
   margin: 0;
