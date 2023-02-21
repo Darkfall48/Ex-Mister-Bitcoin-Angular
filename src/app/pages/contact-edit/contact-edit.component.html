@@ -1,1 +1,14 @@
-<p>contact-edit works!</p>
+<section class="contact-edit">
+  <h2>{{ contact._id ? "Edit" : "Add" }} Contact</h2>
+  <form (ngSubmit)="onAddContact()">
+    <label for="name">Name</label>
+    <input [(ngModel)]="contact.name" type="text" name="name" id="name" />
+    <label for="email">Email</label>
+    <input [(ngModel)]="contact.email" type="email" name="email" id="email" />
+    <label for="phone">Phone</label>
+    <input [(ngModel)]="contact.phone" type="tel" name="phone" id="phone" />
+
+    <button>Save</button>
+    <button routerLink=""></button>
+  </form>
+</section>

@@ -135,6 +135,10 @@ export class ContactService {
 
   constructor() {}
 
+  public getEmptyContact() {
+    return new Contact();
+  }
+
   public loadContacts(): void {
     const filterBy = this._contactFilter$.value;
     let contacts = this._contactsDb;
@@ -175,6 +179,7 @@ export class ContactService {
     );
     // change the observable data in the service - let all the subscribers know
     this._contacts$.next(this._sort(this._contactsDb));
+    return of(contact);
   }
 
   private _addContact(contact: Contact) {
@@ -183,6 +188,7 @@ export class ContactService {
     if (typeof newContact.setId === 'function') newContact.setId(getRandomId());
     this._contactsDb.push(newContact);
     this._contacts$.next(this._sort(this._contactsDb));
+    return of(contact);
   }
 
   private _sort(contacts: Contact[]): Contact[] {

@@ -5,4 +5,10 @@
     [title]="contact.name"
   />
   <h1 class="contacts-list-contact-name">{{ contact.name }}</h1>
+  <a
+    [routerLink]="['/contact/edit', contact._id]"
+    (click)="$event.stopPropagation()"
+    >Edit</a
+  >
+  <a (click)="$event.stopPropagation()">Delete</a>
 </article>
