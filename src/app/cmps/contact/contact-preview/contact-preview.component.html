@@ -22,7 +22,7 @@
   <a
     class="contacts-list-contact-delete-btn"
     title="Delete this contact"
-    (click)="$event.stopPropagation()"
+    (click)="$event.stopPropagation(); onDeleteContact()"
     >Delete</a
   >
 </article>

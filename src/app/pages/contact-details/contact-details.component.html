@@ -11,6 +11,7 @@
   </div>
   <div class="contact-details-btns">
     <a [routerLink]="['/contact/edit', contact._id]">Edit</a>
+    <a (click)="onDeleteContact()">Delete</a>
     <a routerLink="/contact">Back</a>
   </div>
 </article>

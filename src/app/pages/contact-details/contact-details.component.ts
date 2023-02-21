@@ -29,6 +29,11 @@ export class ContactDetailsComponent implements OnInit {
     });
   }
 
+  onDeleteContact() {
+    this.contactService.deleteContact(this.contact._id as string);
+    this.router.navigate(['/contact']);
+  }
+
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
