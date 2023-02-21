@@ -8,7 +8,7 @@
     <label for="phone">Phone</label>
     <input [(ngModel)]="contact.phone" type="tel" name="phone" id="phone" />
 
-    <button>Save</button>
-    <button routerLink=""></button>
+    <button type="submit">Save</button>
+    <button type="button" (click)="goBack()">Cancel</button>
   </form>
 </section>

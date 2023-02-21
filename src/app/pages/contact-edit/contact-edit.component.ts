@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { lastValueFrom, Subscription } from 'rxjs';
@@ -13,7 +14,8 @@ export class ContactEditComponent {
   constructor(
     private contactService: ContactService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private location: Location
   ) {}
 
   contact!: Contact;
@@ -36,10 +38,14 @@ export class ContactEditComponent {
   async onAddContact() {
     try {
       await lastValueFrom(this.contactService.saveContact(this.contact));
-      this.router.navigateByUrl('/');
+      this.goBack();
     } catch (err) {
       console.log('err:', err);
     }
+  }
+
+  goBack() {
+    this.location.back();
   }
 
   ngOnDestroy(): void {

@@ -1,0 +1,51 @@
+@import "src/assets/style/setup/_variables.scss";
+@import "src/assets/style/basics/_typography.scss";
+@import "src/assets/style/setup/_mixins.scss";
+
+.stats-index {
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  height: fit-content;
+  max-height: 100%;
+  max-width: 100%;
+  &-title {
+    @include h2;
+    padding-top: 18px;
+    padding-bottom: 36px;
+  }
+  &-charts-list {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    font-size: 24px;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 400px;
+    width: 430px;
+    @include for-normal-layout {
+      flex-direction: row !important;
+      overflow-x: auto;
+      width: 100%;
+    }
+    // height: fit-content;
+    &-chart {
+      // display: flex;
+      // flex-direction: column;
+      background-color: $secondary-color-4;
+      border-radius: 18px;
+      padding: 8px;
+      aspect-ratio: 16/9;
+      width: 300px;
+      @include for-normal-layout {
+        width: 400px;
+      }
+      &-title {
+        color: $secondary-color-3;
+      }
+      &-container {
+      }
+    }
+  }
+}

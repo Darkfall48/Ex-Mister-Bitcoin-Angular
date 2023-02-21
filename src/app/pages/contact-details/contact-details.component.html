@@ -6,5 +6,6 @@
   <span>Name: {{ contact.name }}</span>
   <span>Email: {{ contact.email }}</span>
   <span>Phone: {{ contact.phone }}</span>
+  <a [routerLink]="['/contact/edit', contact._id]">Edit</a>
   <a routerLink="/contact">Back</a>
 </article>
