@@ -6,9 +6,23 @@
   />
   <h1 class="contacts-list-contact-name">{{ contact.name }}</h1>
   <a
+    class="contacts-list-contact-details-link"
+    title="Show more information about this contact"
+    [routerLink]="['/contact/', contact._id]"
+    (click)="$event.stopPropagation()"
+    >Details</a
+  >
+  <a
+    class="contacts-list-contact-edit-link"
+    title="Edit this contact"
     [routerLink]="['/contact/edit', contact._id]"
     (click)="$event.stopPropagation()"
     >Edit</a
   >
-  <a (click)="$event.stopPropagation()">Delete</a>
+  <a
+    class="contacts-list-contact-delete-btn"
+    title="Delete this contact"
+    (click)="$event.stopPropagation()"
+    >Delete</a
+  >
 </article>

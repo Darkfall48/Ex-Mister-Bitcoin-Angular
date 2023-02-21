@@ -1,0 +1,26 @@
+.contact-details {
+  display: grid;
+  grid-template-areas:
+    "img . btns"
+    "img infos infos";
+  place-items: center;
+  //   gap: 18px;
+
+  &-img {
+    grid-area: img;
+  }
+  &-infos {
+    grid-area: infos;
+    display: flex;
+    flex-direction: column;
+    place-items: flex-start;
+    gap: 8px;
+  }
+
+  &-btns {
+    grid-area: btns;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+}

@@ -1,10 +1,11 @@
 @import "src/assets/style/setup/_mixins.scss";
 
-.contact-index {
+.contacts-index {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: fit-content;
+  place-content: center;
   max-height: 100%;
   max-width: 100%;
   &-title {
@@ -14,4 +15,17 @@
   }
   &-link {
   }
+}
+
+.contacts-list {
+  display: grid;
+  //   justify-items: center;
+  align-items: center;
+  place-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+  overflow-y: auto;
+  max-height: 320px;
+  padding-right: 8px;
+  padding-left: 8px;
 }

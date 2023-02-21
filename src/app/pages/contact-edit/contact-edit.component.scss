@@ -1,0 +1,22 @@
+.contact-edit {
+  & h2 {
+    font-size: 1.2em;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    place-content: center;
+    place-items: center;
+    & img {
+    }
+
+    & form {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      place-items: center;
+    }
+  }
+}

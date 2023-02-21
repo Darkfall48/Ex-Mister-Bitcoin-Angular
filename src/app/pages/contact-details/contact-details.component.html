@@ -1,11 +1,16 @@
 <article class="contact-details">
   <img
+    class="contact-details-img"
     src="https://robohash.org/{{ contact._id }}?set=set4"
     [alt]="contact.name"
   />
-  <span>Name: {{ contact.name }}</span>
-  <span>Email: {{ contact.email }}</span>
-  <span>Phone: {{ contact.phone }}</span>
-  <a [routerLink]="['/contact/edit', contact._id]">Edit</a>
-  <a routerLink="/contact">Back</a>
+  <div class="contact-details-infos">
+    <span>Name: {{ contact.name }}</span>
+    <span>Email: {{ contact.email }}</span>
+    <span>Phone: {{ contact.phone }}</span>
+  </div>
+  <div class="contact-details-btns">
+    <a [routerLink]="['/contact/edit', contact._id]">Edit</a>
+    <a routerLink="/contact">Back</a>
+  </div>
 </article>

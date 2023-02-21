@@ -3,6 +3,8 @@
 .app-footer {
   display: grid !important;
   text-align: center;
+  place-content: center;
+  place-items: center;
   // background-color: #383855;
   background-color: $clr1;
   padding-top: 18px;

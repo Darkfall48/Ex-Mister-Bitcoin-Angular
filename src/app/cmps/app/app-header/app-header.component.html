@@ -3,7 +3,7 @@
     >Mr. ₿itcoin</a
   >
   <h2 class="app-header-rate" title="Current Bitcoin Rate in American Dollar">
-    1$ = {{ "rate" }}₿
+    1$ = {{ rate }}₿
   </h2>
   <nav class="app-header-nav">
     <a
@@ -15,12 +15,13 @@
     <a routerLink="/contact" routerLinkActive="active">Contacts</a>
     <a routerLink="/stats" routerLinkActive="active">Stats</a>
   </nav>
-  <!-- <div class="app-header-exchange">
-    <h1 v-if="user" title="The best person!">{{ user.name }}</h1>
+  <div class="app-header-exchange">
+    <h1 *ngIf="user" title="The best person!">{{ user.name }}</h1>
     <img
-      :src="`https://robohash.org/set_set5/${user.name}`"
-      :alt="user.name"
-      :title="user.name"
+      *ngIf="user"
+      src="https://robohash.org/set_set5/{{ user._id }}"
+      [alt]="user.name"
+      [title]="user.name"
     />
-  </div> -->
+  </div>
 </header>

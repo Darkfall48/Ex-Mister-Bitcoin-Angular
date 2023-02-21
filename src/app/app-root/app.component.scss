@@ -1,8 +1,96 @@
+@import "src/assets/style/setup/_variables.scss";
+@import "src/assets/style/setup/_mixins.scss";
+@import "src/assets/style/setup/_functions.scss";
 @import "src/assets/style/basics/_layout.scss";
+
+.app-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  place-content: center;
+  place-items: center;
+  gap: 9px;
+  margin-top: 18px;
+  padding: 18px;
+  background-color: $secondary-color-5;
+  border-radius: em(18px);
+  &-logo {
+    @include h3;
+    color: $primary-color-3;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &-rate {
+    @include body-1;
+    color: $primary-color-3;
+  }
+  & h2 {
+    display: none;
+    @include for-normal-layout {
+      display: block;
+      @include body-1;
+      color: $clr3;
+    }
+  }
+  &-exchange {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+    @include body-1;
+    color: $primary-color-3;
+    & h1 {
+      display: none;
+      @include for-normal-layout {
+        display: block;
+        @include h3;
+      }
+    }
+    & img {
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+    }
+  }
+  &-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    @include body-1;
+    color: $primary-color-3;
+    a {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      &.active {
+        color: darkred;
+      }
+    }
+  }
+}
 
 .main-content {
   display: grid !important;
   min-height: 75vh;
   max-height: 75vh;
   text-align: center;
+}
+
+.app-footer {
+  display: grid !important;
+  text-align: center;
+  place-content: center;
+  place-items: center;
+  // background-color: #383855;
+  background-color: $clr1;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  border-radius: em(18px);
+  & h1 {
+    // @include h3;
+    color: lightgrey;
+  }
 }

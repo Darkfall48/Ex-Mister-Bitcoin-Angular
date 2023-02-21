@@ -20,9 +20,12 @@ export class HomeComponent {
   rate!: number;
 
   async ngOnInit() {
-    this.balance = this.userService.getUser().coins;
-    this.rate = await this.bitcoinService.getRate();
-    console.log(this.rate);
+    try {
+      this.balance = this.userService.getUser().coins;
+      this.rate = await this.bitcoinService.getRate();
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   bitcoinToDollar() {

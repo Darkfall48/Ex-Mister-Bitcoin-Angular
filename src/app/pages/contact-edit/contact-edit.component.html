@@ -1,14 +1,57 @@
 <section class="contact-edit">
   <h2>{{ contact._id ? "Edit" : "Add" }} Contact</h2>
-  <form (ngSubmit)="onAddContact()">
-    <label for="name">Name</label>
-    <input [(ngModel)]="contact.name" type="text" name="name" id="name" />
-    <label for="email">Email</label>
-    <input [(ngModel)]="contact.email" type="email" name="email" id="email" />
-    <label for="phone">Phone</label>
-    <input [(ngModel)]="contact.phone" type="tel" name="phone" id="phone" />
+  <div class="contact-edit-container">
+    <img
+      *ngIf="contact._id"
+      src="https://robohash.org/{{ contact._id }}?set=set4"
+      [alt]="contact.name"
+    />
+    <form #form="ngForm" (ngSubmit)="onAddContact(); form.reset()">
+      <label for="name">Name</label>
+      <input
+        [(ngModel)]="contact.name"
+        placeholder="Enter a name..."
+        type="text"
+        name="name"
+        id="name"
+        required
+        minlength="3"
+        #name="ngModel"
+      />
+      <p *ngIf="name.touched && name.invalid" class="errors">
+        <span *ngIf="name.errors?.['required']">Name is required!</span>
+        <span *ngIf="name.errors?.['minlength']">Min length is 3</span>
+      </p>
 
-    <button type="submit">Save</button>
-    <button type="button" (click)="goBack()">Cancel</button>
-  </form>
+      <label for="email">Email</label>
+      <input
+        [(ngModel)]="contact.email"
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Enter an email"
+        required
+        email
+        #email="ngModel"
+      />
+      <p *ngIf="email.touched && email.invalid" class="errors">
+        <span *ngIf="email.errors?.['required']">Email is required!</span>
+        <span *ngIf="email.errors?.['email']"
+          >Email should look like: exemple@test.com</span
+        >
+      </p>
+
+      <label for="phone">Phone</label>
+      <input
+        [(ngModel)]="contact.phone"
+        type="tel"
+        name="phone"
+        id="phone"
+        placeholder="Enter a phone number"
+      />
+
+      <button [disabled]="form.invalid" type="submit">Save</button>
+      <button type="button" (click)="goBack()">Cancel</button>
+    </form>
+  </div>
 </section>

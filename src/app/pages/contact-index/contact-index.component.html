@@ -1,6 +1,9 @@
-<section class="contact-index">
-  <h1 class="contact-index-title">Contacts</h1>
+<section class="contacts-index">
+  <h1 class="contacts-index-title">Contacts</h1>
   <a routerLink="/contact/edit">Add Contact</a>
   <contact-filter></contact-filter>
-  <contact-list [contacts]="contacts$ | async"></contact-list>
+  <contact-list
+    class="contacts-list"
+    [contacts]="contacts$ | async"
+  ></contact-list>
 </section>
