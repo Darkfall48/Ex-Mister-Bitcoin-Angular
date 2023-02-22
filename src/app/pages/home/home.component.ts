@@ -1,5 +1,6 @@
 //? Libraries
 import { Component } from '@angular/core';
+import { lastValueFrom, Observable } from 'rxjs';
 //? Models
 import { User } from 'src/app/models/user.model';
 //? Services
@@ -17,18 +18,18 @@ export class HomeComponent {
     private bitcoinService: BitcoinService
   ) {}
   balance!: number;
-  rate!: number;
+  rate!: Promise<any>;
 
   async ngOnInit() {
     try {
       this.balance = this.userService.getUser().coins;
-      this.rate = await this.bitcoinService.getRate();
+      this.rate = lastValueFrom(this.bitcoinService.getRate());
     } catch (err) {
       console.log(err);
     }
   }
 
-  bitcoinToDollar() {
-    return (this.balance / this.rate).toFixed(2);
+  bitcoinToDollar(value: number) {
+    return (this.balance / value).toFixed(2);
   }
 }

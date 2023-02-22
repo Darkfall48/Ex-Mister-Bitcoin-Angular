@@ -1,5 +1,5 @@
-@import "src/assets/style/setup/_variables.scss";
 @import "src/assets/style/basics/_typography.scss";
+@import "src/assets/style/setup/_variables.scss";
 @import "src/assets/style/setup/_mixins.scss";
 
 .stats-index {
@@ -10,7 +10,8 @@
   max-height: 100%;
   max-width: 100%;
   &-title {
-    @include h2;
+    // @include h2;
+    font-size: (48px);
     padding-top: 18px;
     padding-bottom: 36px;
   }

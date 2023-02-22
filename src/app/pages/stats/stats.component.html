@@ -1,7 +1,13 @@
 <section class="stats-index">
   <h1 class="stats-index-title">Statistics</h1>
-  <section class="stats-index-charts-list">
-    <line-chart></line-chart>
-    <bar-chart></bar-chart>
+  <section *ngIf="prices$ | async as prices" class="stats-index-charts-list">
+    <line-chart
+      [prices]="prices"
+      class="stats-index-charts-list-chart"
+    ></line-chart>
+    <bar-chart
+      [prices]="prices"
+      class="stats-index-charts-list-chart"
+    ></bar-chart>
   </section>
 </section>

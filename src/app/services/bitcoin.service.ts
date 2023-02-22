@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { lastValueFrom } from 'rxjs';
+import { lastValueFrom, of } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root',
@@ -21,13 +21,8 @@ export class BitcoinService {
   }
 
   //? Get Market Price History
-  public async getPriceHistory() {
-    try {
-      return await this.getResult('Price History', this.priceHistoryUrl);
-    } catch (err) {
-      console.log('Cannot get market price history:', err);
-      throw err;
-    }
+  public getPriceHistory() {
+    return this.getResult('Price History', this.priceHistoryUrl);
   }
 
   //? Get Average Block Size
@@ -42,12 +37,8 @@ export class BitcoinService {
 
   private getResult(type: string, url: string) {
     const result = loadFromStorage(type);
-    if (result) return Promise.resolve(result);
-    return lastValueFrom(
-      this.http
-        .get<{ answer: string }>(url)
-        .pipe(tap((res) => saveToStorage(type, res)))
-    );
+    if (result) return of(result);
+    return this.http.get<any>(url).pipe(tap((res) => saveToStorage(type, res)));
   }
 }
 

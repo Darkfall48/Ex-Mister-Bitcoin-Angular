@@ -1,10 +1,13 @@
 <section class="home-page">
   <h1 class="home-page-title">Your current Balance</h1>
   <h2 class="home-page-balance">
-    <span title="{{ +bitcoinToDollar() | currency }} in American Dollar">{{
-      balance
-    }}</span>
+    <span
+      title="{{ bitcoinToDollar(rate | async) | currency }} in American Dollar"
+      >{{ balance }}</span
+    >
     ₿itcoins
   </h2>
-  <h2>{{ +bitcoinToDollar() | currency }} in American Dollar</h2>
+  <h2 class="home-page-to-dollar">
+    {{ bitcoinToDollar(rate | async) | currency }} in American Dollar
+  </h2>
 </section>

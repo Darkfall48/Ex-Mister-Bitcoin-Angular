@@ -19,11 +19,11 @@ export class AppHeaderComponent {
   ) {}
 
   user!: User;
-  rate!: number;
+  rate!: Observable<any>;
 
   async ngOnInit() {
     try {
-      this.rate = await this.bitcoinService.getRate();
+      this.rate = this.bitcoinService.getRate();
       this.user = this.userService.getUser();
     } catch (err) {
       console.log(err);

@@ -8,8 +8,10 @@
   place-content: center;
   max-height: 100%;
   max-width: 100%;
+  gap: 18px;
   &-title {
-    @include h2;
+    // @include h2;
+    font-size: (48px);
     padding-top: 18px;
     // padding-bottom: 18px;
   }
