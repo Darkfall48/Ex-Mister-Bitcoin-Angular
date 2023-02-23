@@ -2,7 +2,7 @@
 
 **Mister Bitcoin** is a web application that enables users to view real-time market prices for Bitcoin and track and manage their Bitcoin transactions. Built using Angular.js, the application boasts a responsive design and CRUDL capabilities for contacts and user messages. Additionally, the app features third-party libraries and tools for presenting data using charts, making it easy for users to analyze Bitcoin market trends.
 
-![Ex-Mister-Bitcoin-Angular-Contact](https://user-images.githubusercontent.com/35638060/220618641-80caebbf-c9bb-463a-bc23-1c000c2fa63f.png)
+![Ex-Mister-Bitcoin-Angular-Contact](https://user-images.githubusercontent.com/35638060/220800417-c51e639c-6cec-4ae7-8237-0dcfaeec8905.png)
 
 ### Table of Contents
 
@@ -59,25 +59,25 @@ This will run the app in development mode. Now, open http://localhost:4200 to vi
 
 ### Home Page
 
-![Ex-Mister-Bitcoin-Angular-Home](https://user-images.githubusercontent.com/35638060/220624916-5efef8cd-19d5-43d3-abb0-5f0201bd166c.png)
+![Ex-Mister-Bitcoin-Angular-Home](https://user-images.githubusercontent.com/35638060/220800522-d47c29ee-df80-46b8-95fd-235dff95772e.png)
 
 This page presents an overview of the current Bitcoin market prices, including the current Bitcoin value, percentage changes, and more. It features a responsive design and displays data in a chart and table format, providing an intuitive and easy-to-understand interface for users.
 
 ### Contact List
 
-![Ex-Mister-Bitcoin-Angular-Contact](https://user-images.githubusercontent.com/35638060/220625131-c987f145-6fb9-4fda-9a9f-d0d062a9c99f.png)
+![Ex-Mister-Bitcoin-Angular-Contact](https://user-images.githubusercontent.com/35638060/220800574-ed6e6406-32e2-4d0d-99c4-de1918f5f281.png)
 
 This page allows users to view and manage their contact list, which includes the names and details of individuals or organizations that are associated with their Bitcoin transactions. Users can add, delete, and edit contacts as needed, providing a streamlined and efficient way to keep track of their Bitcoin transactions.
 
 ### Edit Contact
 
-![Ex-Mister-Bitcoin-Angular-Contact-Details](https://user-images.githubusercontent.com/35638060/220624996-d6767d56-7663-4670-8b1d-d847f2ac55bc.png)
+![Ex-Mister-Bitcoin-Angular-Contact-Edit](https://user-images.githubusercontent.com/35638060/220800664-911c9406-7d55-430c-ad93-aa7699a100b9.png)
 
 This page allows users to edit their contact information, including the name, email, and notes associated with each contact. It also features a responsive design and provides an intuitive interface for users to update their contact details as needed.
 
 ### Statistics
 
-![Ex-Mister-Bitcoin-Angular-Stats](https://user-images.githubusercontent.com/35638060/220625054-98d1bd79-ac04-48ca-b05a-21c119babcfe.png)
+![Ex-Mister-Bitcoin-Angular-Statistics](https://user-images.githubusercontent.com/35638060/220800739-3d9f2dc0-3ddb-4f70-98eb-f364f084fa3d.png)
 
 This page presents a range of statistics related to Bitcoin, including the historical price changes, market capitalization, and more. It displays data in a chart format, providing an easy-to-understand and interactive interface for users to analyze Bitcoin market trends.
 
