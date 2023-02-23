@@ -37,7 +37,7 @@ export class ContactEditComponent {
 
   async onAddContact() {
     try {
-      await lastValueFrom(this.contactService.saveContact(this.contact));
+      this.contactService.saveContact(this.contact);
       this.goBack();
     } catch (err) {
       console.log('err:', err);

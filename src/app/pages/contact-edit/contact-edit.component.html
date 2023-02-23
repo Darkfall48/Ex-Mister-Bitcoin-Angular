@@ -6,7 +6,7 @@
       src="https://robohash.org/{{ contact._id }}?set=set4"
       [alt]="contact.name"
     />
-    <form #form="ngForm" (ngSubmit)="onAddContact(); form.reset()">
+    <form #form="ngForm" (ngSubmit)="onAddContact()">
       <label for="name">Name</label>
       <input
         [(ngModel)]="contact.name"

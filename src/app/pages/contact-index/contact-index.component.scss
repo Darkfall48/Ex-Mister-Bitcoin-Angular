@@ -23,7 +23,7 @@
   display: grid;
   //   justify-items: center;
   align-items: center;
-  place-content: center;
+  // place-content: center;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 18px;
   overflow-y: auto;

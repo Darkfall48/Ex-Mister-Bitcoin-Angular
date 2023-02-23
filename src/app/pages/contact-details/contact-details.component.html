@@ -2,16 +2,19 @@
   <img
     class="contact-details-img"
     src="https://robohash.org/{{ contact._id }}?set=set4"
+    [title]="contact.name"
     [alt]="contact.name"
   />
   <div class="contact-details-infos">
-    <span>Name: {{ contact.name }}</span>
-    <span>Email: {{ contact.email }}</span>
-    <span>Phone: {{ contact.phone }}</span>
+    <h2><span>Name: </span> {{ contact.name }}</h2>
+    <h2><span>Email: </span> {{ contact.email }}</h2>
+    <h2><span>Phone: </span> {{ contact.phone }}</h2>
   </div>
   <div class="contact-details-btns">
-    <a [routerLink]="['/contact/edit', contact._id]">Edit</a>
-    <a (click)="onDeleteContact()">Delete</a>
-    <a routerLink="/contact">Back</a>
+    <a class="nice-button" routerLink="/contact">Back</a>
+    <a class="nice-button" [routerLink]="['/contact/edit', contact._id]"
+      >Edit</a
+    >
+    <a class="nice-button" (click)="onDeleteContact()">Delete</a>
   </div>
 </article>

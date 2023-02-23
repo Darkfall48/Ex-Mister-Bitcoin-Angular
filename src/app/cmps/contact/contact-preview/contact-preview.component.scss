@@ -27,6 +27,7 @@
   &-name {
     grid-area: name;
     @include body-1;
+    font-weight: 600;
   }
   &-details-link {
     grid-area: details-link;

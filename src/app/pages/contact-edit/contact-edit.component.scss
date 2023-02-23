@@ -1,12 +1,21 @@
 .contact-edit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  justify-items: stretch;
+  height: fit-content;
+  max-height: 100%;
+  max-width: 100%;
+  gap: 36px;
   & h2 {
-    font-size: 1.2em;
+    font-size: 26px;
   }
 
   &-container {
     display: flex;
     flex-direction: row;
-    gap: 18px;
+    gap: 36px;
     place-content: center;
     place-items: center;
     & img {
@@ -19,4 +28,8 @@
       place-items: center;
     }
   }
+}
+
+.errors {
+  color: red;
 }
