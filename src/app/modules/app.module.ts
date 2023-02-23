@@ -19,6 +19,8 @@ import { AppHeaderComponent } from '../cmps/app/app-header/app-header.component'
 import { AppFooterComponent } from '../cmps/app/app-footer/app-footer.component';
 import { BarChartComponent } from '../cmps/chart/bar-chart/bar-chart.component';
 import { LineChartComponent } from '../cmps/chart/line-chart/line-chart.component';
+//? Pipes
+import { NaturalTypePipe } from '../pipes/natural-type.pipe';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { LineChartComponent } from '../cmps/chart/line-chart/line-chart.componen
     ContactEditComponent,
     BarChartComponent,
     LineChartComponent,
+    NaturalTypePipe,
   ],
   providers: [],
   bootstrap: [AppComponent],
